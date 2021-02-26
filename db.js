@@ -1,6 +1,7 @@
 /**
  * Created by CarlosValdez on 2/26/2021
  */
+
 var crypto = require('crypto');
 module.exports = function() {
     return {
