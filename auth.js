@@ -8,7 +8,7 @@ passport.use(new BasicStrategy(
         {
             return done(null, user);
         }
-        else
+        else    // else I don't have a user
         {
             return done(null, false);
         }

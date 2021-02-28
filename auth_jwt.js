@@ -10,9 +10,10 @@ passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
         var user = db.find(jwt_payload.id);
 
         if (user) {
-            done(null, user);
-        } else {
-            done(null, false);
+            return done(null, user);
+        }
+        else {
+            return done(null, false);
         }
 }));
 
