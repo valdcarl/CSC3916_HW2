@@ -93,7 +93,7 @@ router.route('/movies') // change '/testcollection' to /movies
     })
     .delete(authController.isAuthenticated, function(req, res) {
         console.log(req.body);
-        res = res.status(200);
+        res = res.status(200).send({success: 200, msg: 'movie deleted'});
         if (req.get('Content-Type')) {
             res = res.type(req.get("Content-Type"));
         }
@@ -102,7 +102,7 @@ router.route('/movies') // change '/testcollection' to /movies
     })
     .put(authJwtController.isAuthenticated, function(req, res) {
         console.log(req.body);
-        res = res.status(200);
+        res = res.status(200).send({success: 200, msg: 'movie updated'});
         if (req.get('Content-Type')) {
             res = res.type(req.get('Content-Type'));
         }
